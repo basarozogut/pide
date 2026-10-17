@@ -12,8 +12,8 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Dancing+Script:wght@700&family=Lobster&family=Pacifico&family=Titan+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baloo+2:wght@500;700;800&family=Chakra+Petch:wght@700&family=Dancing+Script:wght@700&family=Exo+2:wght@700;900&family=Lobster&family=Oxanium:wght@700;800&family=Pacifico&family=Rajdhani:wght@700&family=Russo+One&family=Titan+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=9">
   <link rel="preload" as="image" href="img/oval.webp">
 </head>
 <body>
@@ -24,10 +24,22 @@
         <button type="button" data-lang="tr" aria-pressed="true">TR</button>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
+      <div class="cyber-hud" aria-hidden="true">
+        <span class="cyber-badge">CYBERPIDE // 2077</span>
+        <span class="cyber-signal"><span class="cyber-dot"></span>SYS.ONLINE</span>
+      </div>
       <canvas id="pide" role="img" data-i18n-aria="canvas" aria-label="Üzerinde çörek otuyla yazı yazılmış pide"></canvas>
     </section>
 
     <form class="panel" id="panel" autocomplete="off" onsubmit="return false">
+      <fieldset class="field">
+        <legend class="label" data-i18n="theme">Tema</legend>
+        <div class="segmented" id="themes">
+          <label><input type="radio" name="theme" value="classic" checked><span data-i18n="themeClassic">Klasik</span></label>
+          <label><input type="radio" name="theme" value="cyberpunk"><span data-i18n="themeCyber">Cyberpide 2077</span></label>
+        </div>
+      </fieldset>
+
       <label class="field">
         <span class="label" data-i18n="text">Yazı</span>
         <textarea id="text" rows="2" maxlength="60" spellcheck="false">Hoşgeldiniz</textarea>
@@ -79,6 +91,6 @@
     </form>
   </main>
 
-  <script src="app.js?v=16"></script>
+  <script src="app.js?v=19"></script>
 </body>
 </html>
